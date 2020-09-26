@@ -1,5 +1,7 @@
 # gomoku
 
+pyinstaller --onefile src/main.py
+
 # Feracode Front-end
 
 Simple application using WebRTC technology to screen share. This current version supports up to four people in the room, where one is the streamer and the rest are the viewers. Just one person can stream at a time and if someone else want to stream they have to await the streamer end the transmission and then it is made available again.
