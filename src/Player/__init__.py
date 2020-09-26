@@ -59,9 +59,6 @@ class Player(object):
             self.board.enable()
 
           if (recv_data['winner'] != None): # Verifica vitoria
-            print(f'Vencedor: {opponent_data.getName()} ganhou')
-            print(f'Cor: {opponent_data.getColor()}')
-            print(self.data.toString())
             self.data.resetInfo()
             self.board.clearBoard()
         else:

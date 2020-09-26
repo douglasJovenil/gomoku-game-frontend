@@ -82,11 +82,12 @@ class Board(Tk):
 
   def clearBoard(self):
     for id in self.pieces_id: self.canvas.delete(id) # Remove as pecas
-    self.board = self.emptyBoard()
-
+    self.pieces = self.emptyBoard()
+    
   def emptyBoard(self):
+    x = [[None for i in range(QNT_LINES)] for i in range(QNT_LINES)]
+    print(f'emptyBoard: {x}')
     return [[None for i in range(QNT_LINES)] for i in range(QNT_LINES)] # Gera uma matriz vazia
-
 
   # Que orgulho brother
   def verifyWin(self, piece):
