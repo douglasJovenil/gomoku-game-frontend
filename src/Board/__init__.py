@@ -85,8 +85,6 @@ class Board(Tk):
     self.pieces = self.emptyBoard()
     
   def emptyBoard(self):
-    x = [[None for i in range(QNT_LINES)] for i in range(QNT_LINES)]
-    print(f'emptyBoard: {x}')
     return [[None for i in range(QNT_LINES)] for i in range(QNT_LINES)] # Gera uma matriz vazia
 
   # Que orgulho brother
