@@ -11,7 +11,7 @@ The objective of this project is to implement the game [Gomoku](https://en.wikip
 ## ☁️ Links
 
 - [Game executable](https://github.com/douglasJovenil/gomoku-game-frontend/releases/download/v1.1/gomoku.exe)
-- [Back-end code](https://github.com/douglasJovenil/gomoku-game-backend)
+- [Back-End code](https://github.com/douglasJovenil/gomoku-game-backend)
 
 ## 💻 Project
 
