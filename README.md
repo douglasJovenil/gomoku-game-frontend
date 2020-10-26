@@ -44,9 +44,10 @@ This project was developed with the following technologies:
 ## 🏃 Usage
 
 ```bash
-pip install -r requirements.txt
 git clone https://github.com/douglasJovenil/gomoku-game-frontend
 cd gomoku-game-frontend
+pip install -r requirements.txt
+cd src
 python main.py
 ```
 
