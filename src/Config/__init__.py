@@ -1,4 +1,4 @@
-HOST = 'djcsantosprojects.ddns.net'
+HOST = 'localhost'
 PORT = 6969
 BUFFER_SIZE = 1024
 ENCODING = 'utf-8'

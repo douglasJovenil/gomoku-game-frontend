@@ -1,78 +1,60 @@
-# gomoku
+# Gomoku Game Front-End
 
-pyinstaller --onefile src/main.py
+The objective of this project is to implement the game [Gomoku](https://en.wikipedia.org/wiki/Gomoku) using Sockets. 
 
-# Feracode Front-end
-
-Simple application using WebRTC technology to screen share. This current version supports up to four people in the room, where one is the streamer and the rest are the viewers. Just one person can stream at a time and if someone else want to stream they have to await the streamer end the transmission and then it is made available again.
+### Considerations
+- If you want to try this game I have made an executable so you don't have to do any work but you have to open the port **6969** on your firewall, or change the **PORT** variable on [Config](src/Config/__init__.py).
+- This currently implementation is hosted on localhost, if you want to play across the internet, just run the [backend](https://github.com/douglasJovenil/gomoku-game-frontend) on some cloud machine and change the **HOST** variable on [Config](src/Config/__init__.py).
+- This version supports just two players at same time.
+- To run this application you have to run the [backend](https://github.com/douglasJovenil/gomoku-game-frontend) too.
 
 ## ☁️ Links
 
-- [Live preview](https://feracode-frontend.herokuapp.com)
-- [Back-end code](https://github.com/douglasJovenil/feracode_backend)
+- [Game executable](https://github.com/douglasJovenil/gomoku-game-frontend/releases/download/v1.0/gomoku.exe)
+- [Back-end code](https://github.com/douglasJovenil/gomoku-game-backend)
 
 ## 💻 Project
 
-#### User alone in the room
+### Player A in the room
 
-<p align="center">
-   <img src="./img/00_usuario_sozinho_na_sala.png">
-</p>
+![Plater A in the room](docs/images/00_player_A_waiting.png)
 
-#### Two users in the room
+### Player B in the room
 
-<p align="center">
-   <img src="./img/01_dois_usuario_na_sala.png">
-</p>
+![Plater B in the room](docs/images/01_player_B_waiting.png)
 
-#### User starting a stream
+### In game
 
-<p align="center">
-   <img src="./img/02_usuario_iniciando_stream.png">
-</p>
+![In game](docs/images/02_in_game.png)
 
-#### Viewer screen while streamer select a streaming source
 
-<p align="center">
-   <img src="./img/04_tela_do_viewer_quando_o_streamer_esta_selecionando_uma_fonte.png">
-</p>
-
-#### Streamer screen during the stream
-
-<p align="center">
-   <img src="./img/05_tela_do_streamer_durante_stream.png">
-</p>
-
-#### Viewer screen during the stream
-
-<p align="center">
-   <img src="./img/06_tela_do_viewer_durante_stream.png">
-</p>
 
 ## 🚀 Technologies
 
 This project was developed with the following technologies:
 
-<img align="left" alt="Typescript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" /> Typescript
+<img align="left" alt="Python" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" /> Python3.7+
 
-<img align="left" alt="ReactJS" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" /> ReactJS
+<img align="left" alt="Sockets" width="26px" src="docs/images/03_socket.png" > Sockets
 
-<img align="left" alt="styled-components" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/styled-components/styled-components.png" /> Styled-Components
+<img align="left" alt="Tkinter" width="26px" src="docs/images/04_tkinter.jpg" > Tkinter
 
-<img align="left" alt="WebRTC" width="26px" src="https://i.imgur.com/9C5ScMM.png" > WebRTC
 
-<img align="left" alt="SocketIO" width="26px" src="https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg" /> SocketIO
 
 ## 🏃 Usage
 
 ```bash
-git clone https://github.com/douglasJovenil/feracode_frontend
-cd feracode_frontend
-yarn install
-yarn start
+pip install -r requirements.txt
+git clone https://github.com/douglasJovenil/gomoku-game-frontend
+cd gomoku-game-frontend
+python main.py
 ```
 
-## 📔 TODO
-- Fix bug that occurs when a user try to join the room and the streamer finishes the stream
-- Develop environment variables to use at Heroku
-- Configure CORS
+### To generate an executable
+
+```
+cd gomoku-game-frontend
+pyinstaller --onefile src/main.py
+```
+
+The executable in be on folder **dist**.
